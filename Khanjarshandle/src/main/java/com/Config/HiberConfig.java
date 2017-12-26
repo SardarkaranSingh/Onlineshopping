@@ -2,15 +2,25 @@ package com.Config; //day 4 info
 
 import java.util.Properties;
 
+
+
 import javax.sql.*;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate3.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.model.User;
+@SuppressWarnings("deprecation")
+@Configuration
+@ComponentScan("com")
+@EnableTransactionManagement
 
 public class HiberConfig 
 {
@@ -20,7 +30,7 @@ public class HiberConfig
 	{
 		DriverManagerDataSource  dsource=new DriverManagerDataSource();
 		dsource.setDriverClassName("org.h2.Driver");
-		dsource.setUrl("jdbc:h2:tcp://localhost/~/Khanjar");
+		dsource.setUrl("jdbc:h2:tcp://localhost/~/Khanjars");
 		dsource.setUsername("sa");
 		dsource.setPassword(" ");
 		System.out.println("H2 connected");
@@ -58,5 +68,11 @@ public SessionFactory getHibernateSession(DataSource datasource)
 @Autowired
 @Bean(name="transactionManager")
 
-public HiberTransaction
+public HibernateTransactionManager  getTrans(SessionFactory sf)
+{
+	HibernateTransactionManager tm=new HibernateTransactionManager(sf);
+	return tm;
+	
+	
+}
 }

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html lang="en">
 <head>
   <title>khanjar's of all kind</title>
@@ -10,6 +11,7 @@
 </head>
 <body>
 
+<jsp:include page="header.jsp"></jsp:include>
 <div class="container">
   <h2>Presenting</h2>  
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -23,15 +25,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="resources/images/khanjar1.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="resources/images/khanjar1.jpg" alt="kh1" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="resources/images/khanjar2.jpg" alt="Chicago" style="width:100%;">
+        <img src="resources/images/khanjar2.jpg" alt="kh2" style="width:100%;">
       </div>
     
       <div class="item">
-        <img src="resources/images/khanjar3.jpg" alt="New york" style="width:100%;">
+        <img src="resources/images/khanjar3.jpg" alt="kh3" style="width:100%;">
       </div>
     </div>
 
