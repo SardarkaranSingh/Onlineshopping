@@ -1,30 +1,35 @@
-package com.model;
+package com.backend.model;
+
 import java.io.Serializable;
 
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
 
+@Component 
+@Entity
 
-
-
-@Component //this is used for mark the class as container
-
-@Entity //this will automatically create table in database
-
-public class User implements Serializable 
-{ 
-@Id
+public class User implements Serializable
+{
 	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	private String email;
 	private String name;
 	private String password;
-	private String email;
-	private String role;
+	private String roll;
 	private String address;
 	private String phone;
-	private boolean enabled;
+	private String enabled;
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getName() {
 		return name;
 	}
@@ -37,17 +42,11 @@ public class User implements Serializable
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getEmail() {
-		return email;
+	public String getRoll() {
+		return roll;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
+	public void setRoll(String roll) {
+		this.roll = roll;
 	}
 	public String getAddress() {
 		return address;
@@ -61,14 +60,12 @@ public class User implements Serializable
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public boolean isEnabled() {
+	public String getEnabled() {
 		return enabled;
 	}
-	public void setEnabled(boolean enabled) {
+	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
-	
-	
-	
 
+	
 }

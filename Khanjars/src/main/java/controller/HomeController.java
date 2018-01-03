@@ -14,5 +14,13 @@ public class HomeController
 		ModelAndView m1=new ModelAndView("index");
 		return m1;
 	}
-    
+	
+	/*
+    @RequestMapping("/goToRegister", method=RequestMethod
+public String goToRegister()
+{
+    	return "register";  
 }
+*/
+}
+
