@@ -20,14 +20,16 @@ public class User implements Serializable
 	private String email;
 	private String name;
 	private String password;
-	private String roll;
+	private String role;
 	private String address;
 	private String phone;
 	private String enabled;
-	public String getEmail() {
+	public String getEmail() 
+	{
 		return email;
 	}
-	public void setEmail(String email) {
+	public void setEmail(String email) 
+	{
 		this.email = email;
 	}
 	public String getName() {
@@ -42,11 +44,11 @@ public class User implements Serializable
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRoll() {
-		return roll;
+	public String getRole() {
+		return role;
 	}
-	public void setRoll(String roll) {
-		this.roll = roll;
+	public void setRole(String roll) {
+		this.role = role;
 	}
 	public String getAddress() {
 		return address;
@@ -66,6 +68,10 @@ public class User implements Serializable
 	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
+	
+		
+	}
+
 
 	
-}
+

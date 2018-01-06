@@ -40,7 +40,7 @@ public class UserTestCases {
 		user.setName("Srujana2");
 		user.setPassword("srujana2");
 		user.setPhone("851984343");
-		user.setRoll("ROLE_USER");
+		user.setRole("ROLE_USER");
 		user.setEnabled("true");
 		user.setAddress("Kukatpally, Hyderabad");
 
